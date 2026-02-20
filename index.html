@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="shadow-box">
+        <div id="head">
+            <h2>PHP versions against plugin revision among xxxx installations</h2>
+            <p>Ces informations sont issues des statistiques anonymes récoltées auprès des installations de Piwigo.
+                Elles donnes un indice sur la compatibilité de la v de PHP sans en être une garantie</p>
+        </div>
+        <div id="chart">
+            <div id="columns">
+                <p>12.1</p>
+                <p>11.4</p>
+                <p>11.3</p>
+                <p>11.2</p>
+                <p>11.1</p>
+                <p>10.4</p>
+                <p>10.3</p>
+                <p>10.2</p>
+                <p>10.1</p>
+                <p>9.2</p>
+                <p>9.1</p>
+            </div>
+            <div id="rows">
+                <div id="php-v">
+                    <p>PHP 8.3</p>
+                    <p>PHP 8.2</p>
+                    <p>PHP 8.1</p>
+                    <p>PHP 8</p>
+                    <p>PHP 7.4</p>
+                    <p>PHP 7.3</p>
+                    <p>PHP 7.2</p>
+                </div>
+                <canvas id="myChart">
+                </canvas>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="assets/js/grid.js"></script>
+
+</html>
