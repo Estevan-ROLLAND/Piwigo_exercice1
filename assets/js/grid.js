@@ -271,3 +271,13 @@ const ctx = document.getElementById('myChart');
 
 
 new Chart(ctx, config);
+
+function dotsSize() {
+    data.datasets.forEach(dataset => {
+        dataset.data.forEach(dot => {
+            dot.r = (Math.random() + 0.1) * 50
+        });
+    });
+}
+
+dotsSize()
