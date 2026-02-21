@@ -5,16 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/index.css">
 
+    <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
+    <!-- LIBRAIRIE CHART.JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <title>Document</title>
+    <title>Exercice 1 - Piwigo</title>
 </head>
 
 <body>
@@ -22,7 +25,7 @@
         <div id="head">
             <h2>PHP versions against plugin revision among xxxx installations</h2>
             <p>Ces informations sont issues des statistiques anonymes récoltées auprès des installations de Piwigo.
-                Elles donnes un indice sur la compatibilité de la v de PHP sans en être une garantie</p>
+                Elles donnent un indice sur la compatibilité de la v de PHP sans en être une garantie</p>
         </div>
         <div id="chart">
             <div id="columns">
@@ -48,7 +51,7 @@
                     <p>PHP 7.3</p>
                     <p>PHP 7.2</p>
                 </div>
-                <canvas id="myChart">
+                <canvas id="myChart"> <!-- Contient le graphique bubble chart-->
                 </canvas>
             </div>
 

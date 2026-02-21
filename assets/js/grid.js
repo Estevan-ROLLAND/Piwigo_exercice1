@@ -209,17 +209,8 @@ const data = {
                 y: 4,
                 r: 10
             }],
-            backgroundColor: 'rgba(0, 0, 255, 0.2)'
-        },
-        {
-            label: 'Phantom Dataset',
-            data: [{
-                x: 10,
-                y: 5,
-                r: 0
-            }],
-            backgroundColor: 'rgb(255,255, 255)'
-        },
+            backgroundColor: 'rgba(165, 165, 255, 0.2)'
+        }
     ]
 };
 
@@ -229,7 +220,15 @@ const config = {
     options: {
         plugins: {
             legend: {
-                display: false
+                display: false // on cache la légende, pas utile dans notre cas
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) { // définit pour chaque tooltip le texte 'xxxxx installations'
+                        let label = 'xxxxx installations';
+                        return label;
+                    }
+                }
             }
         },
         scales: {
@@ -239,40 +238,39 @@ const config = {
                 max: 10,
                 ticks: {
                     stepSize: 1,
-                    display: false   // cache les nombres
+                    display: false   // cache les nombres/labels
                 },
                 border: {
                     display: false   // cache la ligne de l’axe
                 },
                 grid: {
-                    display: true    // garde la grille
+                    display: true    // garde la grille visible
                 }
             },
             y: {
+                type: 'linear',
                 min: 0 - 0.5, // permet de décaler pour avoir le point en entier, pas découpé
                 max: 7,
                 ticks: {
                     stepSize: 1,
-                    display: false   // cache les nombres
+                    display: false   // cache les nombres/labels
                 },
                 border: {
                     display: false   // cache la ligne de l’axe
                 },
                 grid: {
-                    display: true    // garde la grille
+                    display: true    // garde la grille visible
                 }
             },
-            bounds: 'ticks',
         }
     }
 };
 
 const ctx = document.getElementById('myChart');
 
-
 new Chart(ctx, config);
 
-function dotsSize() {
+function dotsSize() { // défini une taille aléatoire à chaque point du graphique, entre 5 et 55
     data.datasets.forEach(dataset => {
         dataset.data.forEach(dot => {
             dot.r = (Math.random() + 0.1) * 50
